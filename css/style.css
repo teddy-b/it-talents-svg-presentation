@@ -1,0 +1,68 @@
+body {
+	background: rgb(80,255,80); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(80,255,80), rgb(150,255,150)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(80,255,80), rgb(150,255,150)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(80,255,80), rgb(150,255,150)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(80,255,80), rgb(150,255,150)); /* Standard syntax */
+}
+
+li {
+	list-style-type: none;
+	display: none;
+}
+
+li.current {
+	display: block;
+}
+
+li:first-child polygon.back,
+li:last-child polygon.forward {
+	fill: #ccc;
+}
+
+polygon.back:hover, polygon.forward:hover {
+	fill: #f93;
+}
+
+.script.on {
+	font-family: "ff-market-web";
+}
+
+.filtered-heading{
+	font: 800 60px/1 'Sniglet', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx - font-smoothing: grayscale;
+	font-size: 60px;
+	filter: url(#filtered-heading);
+	-webkit-filter: url(#filtered-heading);
+	color: #EF7349;
+	fill: #EF7349;
+}
+
+.filtered-text{
+	font: 600 40px/1 'Sniglet', sans-serif;
+	font-size: 40px;
+	stroke: #000;
+	fill: #EF7349;
+}
+
+.filtered-text-link{
+	font: 600 40px/1 'Sniglet', sans-serif;
+	font-size: 40px;
+	stroke: #000;
+	fill: #EF7349;
+}
+
+.filtered-text-link:hover{
+	font: 600 40px/1 'Sniglet', sans-serif;
+	font-size: 40px;
+	stroke: #000;
+	fill: #ff6;
+}
+
+.filtered-text-small{
+	font: 600 'Sniglet', sans-serif;
+	font-size: 26px;
+	stroke: #000;
+	fill: #EF7349;
+}

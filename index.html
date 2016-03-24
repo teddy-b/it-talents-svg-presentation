@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<ul>
+		<li class="current">
+			<svg class="svg" width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="150" height="150" />
+				<image xlink:href="images/svg-text-path.svg" x="220" y="0" width="1000" height="200" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="60" y="400">SVG: Scalable Vector Graphics</text>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">SVG: Scalable Vector Graphics</text>
+				<text class="filtered-text" stroke="black" x="140" y="180">Vector-based graphics in XML format
+					<tspan x="140" y="260">Developed by W3C</tspan>
+					<tspan x="140" y="340">Initial release: 2001; Latest release: 2011</tspan>
+					<tspan x="140" y="420">SVG 2 expected release: 2016</tspan>
+					<tspan x="140" y="500">Introdused as &lt;svg&gt; tag in HTML5</tspan>
+				</text>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Advantages</text>
+				<text class="filtered-text" stroke="black" x="140" y="200">Do NOT lose any quality if zoomed or resized
+					<tspan x="140" y="300">Every SVG element can be appended to the DOM</tspan>
+					<tspan x="140" y="400">Can be searched, indexed, scripted and compressed</tspan>
+					<tspan x="140" y="500">Higher-level structure and semantics</tspan>
+				</text>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Raster vs. vector format</text>
+				<image xlink:href="images/bitmap-vs-svg.svg" x="140" y="140" width="800" height="350" />
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Basic shapes, stroke</text>
+				<rect x="140" y="150" width="200" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+				<circle cx="450" cy="200" r="40" stroke="black" stroke-width="3" fill="red" />
+				<ellipse cx="660" cy="200" rx="100" ry="50" style="fill:yellow;stroke:purple;stroke-width:2" />
+				<polygon fill="yellow" stroke="blue" stroke-width="5" points="250,275 279,361 369,361 297,415 323,501 250,450 177,501 203,415 131,361 221,361" />
+				<line x1="400" y1="310" x2="600" y2="480" style="stroke:rgb(255,0,0);stroke-width:2" />
+				<polyline points="580,320 600,325 620,340 640,420 680,440 760,480" style="fill:none;stroke:black;stroke-width:3" />
+				<g fill="none" stroke="black">
+					<path stroke-width="2" d="M820 180 l200 0" />
+					<path stroke-width="4" d="M820 200 l200 0" />
+					<path stroke-width="6" d="M820 220 l200 0" />
+				</g>
+				<g fill="none" stroke="black" stroke-width="6">
+					<path stroke-linecap="butt" d="M820 300 l200 0" />
+					<path stroke-linecap="round" d="M820 320 l200 0" />
+					<path stroke-linecap="square" d="M820 340 l200 0" />
+				</g>
+				<g fill="none" stroke="black" stroke-width="4">
+					<path stroke-dasharray="5,5" d="M820 420 l200 0" />
+					<path stroke-dasharray="10,10" d="M820 440 l200 0" />
+					<path stroke-dasharray="20,10,5,5,5,10" d="M820 460 l200 0" />
+				</g>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Path, filter, gradient, pattern</text>
+				<path id="lineAB" d="M 100 450 l 150 -300" stroke="red" stroke-width="3" fill="none" />
+				<path id="lineBC" d="M 250 150 l 150 300" stroke="red" stroke-width="3" fill="none" />
+				<path d="M 175 300 l 150 0" stroke="green" stroke-width="3" fill="none" />
+				<path d="M 100 450 q 150 -300 300 0" stroke="blue" stroke-width="5" fill="none" />
+				<!-- Mark relevant points -->
+				<g stroke="black" stroke-width="3" fill="black">
+					<circle id="pointA" cx="100" cy="450" r="3" />
+					<circle id="pointB" cx="250" cy="150" r="3" />
+					<circle id="pointC" cx="400" cy="450" r="3" />
+				</g>
+				<!-- Label the points -->
+				<g font-size="30" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+					<text x="100" y="450" dx="-30">A</text>
+					<text x="250" y="150" dy="-10">B</text>
+					<text x="400" y="450" dx="30">C</text>
+				</g>
+				<defs>
+					<filter id="f1" x="0" y="0" width="200%" height="200%">
+						<feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+						<feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+					</filter>
+				</defs>
+				<rect x="500" y="150" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)" />
+				<defs>
+					<filter id="f3" x="0" y="0" width="200%" height="200%">
+						<feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+						<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+						<feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+					</filter>
+				</defs>
+				<rect x="500" y="350" width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f3)" />
+				<defs>
+					<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+						<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+						<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+					</linearGradient>
+				</defs>
+				<ellipse cx="770" cy="200" rx="85" ry="55" fill="url(#grad1)" />
+				<defs>
+					<radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+						<stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+						<stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+					</radialGradient>
+				</defs>
+				<ellipse cx="770" cy="400" rx="85" ry="55" fill="url(#grad1)" />
+				<defs>
+					<pattern id="TrianglePattern" patternUnits="userSpaceOnUse" x="0" y="0" width="20" height="20" viewBox="0 0 10 10" >
+						<path d="M 0 0 L 7 0 L 3.5 7 z" fill="red" stroke="blue" />
+					</pattern>
+				</defs>
+				<ellipse fill="url(#TrianglePattern)" stroke="black" stroke-width="3" cx="1000" cy="200" rx="85" ry="55" />
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Text</text>
+				<text class="filtered-text" x="140" y="180">Styles and animations can be applied
+					<tspan x="140" y="260">Text can be selected and copied</tspan>
+					<tspan x="140" y="340">Text can be indexed by search engines</tspan>
+					<tspan x="140" y="300"></tspan>
+					<tspan x="140" y="340"></tspan>
+					<tspan x="140" y="180"></tspan>
+					<tspan x="140" y="180"></tspan>
+					<tspan x="140" y="180"></tspan>
+					<tspan x="140" y="180"></tspan>
+					<tspan x="140" y="180"></tspan>
+				</text>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Animations</text>
+				<g id="R1" transform="translate(250 250)"> 
+				<ellipse rx="50" ry="0" opacity=".3">
+					<animateTransform attributeName="transform" type="rotate" dur="7s" from="0" to="360" repeatCount="indefinite"/>
+					<animate attributeName="cx" dur="8s" values="20; 120; 20" repeatCount="indefinite"/>
+					<animate attributeName="ry" dur="3s" values="10; 60; 10" repeatCount="indefinite"/>
+				</ellipse>
+				</g>
+				<use xlink:href="#R1" transform="rotate(72 250 300)"/>
+				<use xlink:href="#R1" transform="rotate(144 250 300)"/>
+				<use xlink:href="#R1" transform="rotate(216 250 300)"/>
+				<use xlink:href="#R1" transform="rotate(288 250 300)"/>
+				<rect id="rec" x="700" y="250" width="150" height="100" style="fill:lime"> 
+					<animate attributeName="x" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="700" to="600" repeatCount="indefinite"/> 
+					<animate attributeName="y" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="250" to="150" repeatCount="indefinite"/> 
+					<animate attributeName="width" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="150" to="400" repeatCount="indefinite"/> 
+					<animate attributeName="height" attributeType="XML" begin="0s" dur="6s" fill="freeze" from="100" to="300" repeatCount="indefinite"/> 
+					<animate attributeName="fill" attributeType="CSS" from="lime" to="red" begin="2s" dur="4s" fill="freeze" repeatCount="indefinite"/>
+				</rect>
+				<g transform="translate(100,100)"> 
+					<text id="TextElement" x="0" y="0" style="font-family:Verdana;font-size:24; visibility:hidden"> It's SVG!
+						<set attributeName="visibility" attrib55eType="CSS" to="visible" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"repeatCount="indefinite"/>
+						<animateMotion path="M 0 0 L 550 200" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/>
+						<animate attributeName="fill" attributeType="CSS" from="red" to="blue" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/> 
+						<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="-30" to="0" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/> 
+						<animateTransform attributeName="transform" attributeType="XML" type="scale" from="1" to="3" additive="sum" begin="1s" dur="5s" fill="freeze" repeatCount="indefinite"/> 
+					</text>
+				</g>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">SVG vs. Canvas</text>
+				<text class="filtered-text" x="100" y="180">SVG</text>
+				<text class="filtered-text-small" x="100" y="220">Vector based (composed of shapes)
+					<tspan x="100" y="260">Resolution independent</tspan>
+					<tspan x="100" y="300">Multiple graphical elements, part of the DOM</tspan>
+					<tspan x="100" y="340">Modified through script and CSS</tspan>
+					<tspan x="100" y="380">Support for event handlers</tspan>
+					<tspan x="100" y="420">Rerender each shape separately</tspan>
+					<tspan x="100" y="460">Best for small number of objects or large surface</tspan>
+					<tspan x="100" y="500">Well suited for charts, diagrams, maps</tspan>
+				</text>
+				<text class="filtered-text" x="620" y="180">Canvas</text>
+				<text class="filtered-text-small" x="620" y="220">Raster based (composed of pixel)
+					<tspan x="620" y="260">Resolution dependent</tspan>
+					<tspan x="620" y="300">Single HTML element</tspan>
+					<tspan x="620" y="340">Modified through script only</tspan>
+					<tspan x="620" y="380">No support for event handlers</tspan>
+					<tspan x="620" y="420">Rerender the whole canvas at once</tspan>
+					<tspan x="620" y="460">Best for small surface or large number of objects</tspan>
+					<tspan x="620" y="500">Well suited for graphic-intensive games</tspan>
+				</text>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">SVG vs. Canvas</text>
+				<image xlink:href="images/canvas-vs-svg.png" x="140" y="140" width="680" height="350" />
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Raphael JS</text>
+				<text class="filtered-text" stroke="black" x="140" y="180">JavaScript library for work with SVG
+					<tspan x="140" y="260">Simple and easy</tspan>
+					<tspan x="140" y="340">Cross-browser</tspan>
+				</text>
+				<a xlink:href="http://dmitrybaranovskiy.github.io/raphael/pie.html" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="140" y="420">Demo example</text>
+				</a>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+		<li>
+			<svg width="1170" height="550">
+				<image xlink:href="images/svg-logo.svg" x="20" y="20" width="100" height="100" />
+				<defs>
+					<!-- source: https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/ -->
+					<filter id="filtered-heading" >
+						<!-- COLORS -->
+						<feFlood flood-color="#551C0B" result="COLOR-outline" />
+						<!-- COLORS END-->
+						<!-- OUTLINE -->
+						<feMorphology operator="dilate" radius="3" in="SourceAlpha" result="OUTLINE_10" />
+						<feComposite operator="in" in="COLOR-outline" in2="OUTLINE_10"  result="OUTLINE_20" />
+						<!-- OUTLINE END -->
+						<!-- LIGHTING EFFECTS -->
+						<feGaussianBlur stdDeviation="4" in="SourceAlpha" result="LIGHTING-EFFECTS_10"/>
+						<feSpecularLighting surfaceScale="5" specularConstant="0.5" specularExponent="7.5" lighting-color="#white" in="LIGHTING-EFFECTS_10" result="LIGHTING-EFFECTS_20">
+						<fePointLight x="750" y="-50" z="300" />
+						</feSpecularLighting>
+						<feComposite in2="SourceAlpha" operator="in" in="LIGHTING-EFFECTS_20" result="LIGHTING-EFFECTS_30"/>
+						<feComposite operator="arithmetic" k1="0" k2="1" k3="1" k4="0" in="SourceGraphic" in2="LIGHTING-EFFECTS_30" result="LIGHTING-EFFECTS_40"/>
+						<!-- LIGHTING EFFECTS END -->
+						<!-- COLOR EFFECTS -->
+						<feComponentTransfer in="LIGHTING-EFFECTS_40" result="COLOR-EFFECTS_10">
+							<feFuncR type="gamma" offset="-1.3" amplitude="10" exponent="4.84"/>
+							<feFuncB type="gamma" offset="-1.3" amplitude="10.1" exponent="40.84"/>
+						</feComponentTransfer>
+						<!-- COLOR EFFECTS END <-->
+						<feMerge>
+							<feMergeNode in="OUTLINE_20" />
+							<feMergeNode in="COLOR-EFFECTS_10"/>
+						</feMerge>
+					</filter>
+				</defs>
+				<text class="filtered-heading" x="140" y="100">Resources</text>
+				<a xlink:href="http://www.w3.org/Graphics/SVG/" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="140" y="180">W3C SVG Home</text>
+				</a>
+				<a xlink:href="https://www.w3.org/TR/SVG/" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="140" y="260">W3C Recomendation</text>
+				</a>
+				<a xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="140" y="340">MDN</text>
+				</a>
+				<a xlink:href="https://msdn.microsoft.com/en-us/library/gg589525(v=vs.85).aspx" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="140" y="420">MDSN</text>
+				</a>
+				<a xlink:href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="640" y="180">Wikipedia</text>
+				</a>
+				<a xlink:href="http://www.w3schools.com/svg/default.asp" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="640" y="260">w3schools</text>
+				</a>
+				<a xlink:href="http://dmitrybaranovskiy.github.io/raphael/" target="_blank">
+					<text class="filtered-text-link" stroke="black" x="640" y="340">Raphael JS</text>
+				</a>
+				<polygon class="back" fill="#ff6" points="40,250 20,270 40,290" />
+				<polygon class="forward" fill="#ff6" points="1130,250 1150,270 1130,290" />
+			</svg>
+		</li>
+	</ul>
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
